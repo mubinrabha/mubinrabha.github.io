@@ -1,0 +1,114 @@
+/*
+@if $legacy-support-for-ie8 {
+Any extra IE8 only styles.
+    h1 {
+      color: white;
+    }
+  }
+*/
+
+.navigation {
+  z-index: 1;
+
+}
+
+.navigation, .navigation ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  width: 100%;
+  float: left;
+  //-webkit-padding-start: 0px;
+}
+
+@include breakpoint($lap) {
+  .navigation, .navigation ul {
+    text-align: center;
+  }
+}
+.navigation li {
+  float: left;
+  width: 100%;
+  display: block;
+}
+@include breakpoint($lap) {
+  .navigation li {
+    float: none;
+    display: inline-block;
+    *display: block;
+    *float: left;
+    width: auto;
+    margin-left: .4em;
+    margin-right: .2em;
+
+  }
+}
+
+.navigation a {
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 0.125em;
+  //color: $textColor;
+  text-decoration: none;
+  width: 100%;
+  //border-bottom: 0.063em solid (lighten($brightBlue, 19%));
+  padding: .5em 1em;
+  float: left;
+}
+.navigation a:focus {
+  //background: #ffffff;
+  outline: none;
+  //color: $brightBlue;
+}
+@include breakpoint($lap) {
+  .navigation a {
+    _float: none;
+    -webkit-font-smoothing: antialiased;
+    margin: 0;
+    padding: 1em .7em .5em;
+    background: transparent;
+    border: 0;
+    //animation for big goes here
+  }
+
+}
+.js .navigation {
+  clip: rect(0 0 0 0);
+  max-height: 0;
+  position: absolute;
+  display: block;
+  overflow: hidden;
+}
+@include breakpoint($lap) {
+  .js .navigation {
+    position: relative !important;
+    max-height: none;
+  }
+}
+.navigation.opened {
+  max-height: 9999em
+}
+.nav-toggle {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+    //background-color: $lightGrey;
+    height: 3em;
+    padding: 0.5em 0 1.5em 0;
+    //border-bottom: 0.063em solid (darken($lightGrey, 4%));
+    //border-top: 0.063em solid (darken($lightGrey, 4%));
+    //color: $textColor;
+}
+
+@include breakpoint($lap) {
+  .nav-toggle {
+    display: none;
+  }
+}

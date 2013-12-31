@@ -1,0 +1,38 @@
+// Global Styles
+/*$bodycopy: rgb(85, 85, 85);
+$link-active: rgb(76, 76, 76);
+$link-hover: rgb(96, 189, 219);
+$heading-primary: rgb(76, 76, 76)
+$heading-sub: rgb(85, 85, 85);
+$border: rgb(238, 238, 238);
+$background: rgb(243, 243, 243); */
+
+// links all
+
+
+a {
+	@include adjust-font-size-to(16px);
+    @include apply-side-rhythm-border(bottom, $width: 1px, $lines: 0);
+    border-bottom-style: dotted;
+    border-bottom-color: $border;
+    text-transform: uppercase;
+	text-decoration: none;
+	@include padding-leader($lines: 0.5);
+	@include padding-trailer($lines: 0.5);
+	color: $bodycopy;
+	&:hover, &:focus {
+		color: $link-hover;
+		outline: none;
+	}
+	&.active {
+		color: $link-active;
+	}
+}
+
+h1 {
+	color: $heading-primary;
+	font-family: 'merriweatherbold';
+}
+h2, h3, h4, h5, h6 {
+	color: $heading-sub;
+}
