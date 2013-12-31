@@ -6,90 +6,109 @@ Any extra IE8 only styles.
     }
   }
 */
+.m-logo {
+  text-align: center;
+  @include breakpoint($desk) {
+    text-align: left;
+  }
+}
+
 
 .navigation {
-  z-index: 1;
-
+    z-index: 1;
 }
 
 .navigation, .navigation ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  width: 100%;
-  float: left;
-  //-webkit-padding-start: 0px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    width: 100%;
+    float: left;
+    //-webkit-padding-start: 0px;
 }
 
-@include breakpoint($lap) {
-  .navigation, .navigation ul {
-    text-align: center;
-  }
+@include breakpoint($lap, $no_query: true) {
+    .navigation, .navigation ul {
+        text-align: center;
+    }
 }
+
+
 .navigation li {
-  float: left;
-  width: 100%;
-  display: block;
+    float: left;
+    width: 100%;
+    display: block;
 }
-@include breakpoint($lap) {
-  .navigation li {
-    float: none;
-    display: inline-block;
-    *display: block;
-    *float: left;
-    width: auto;
-    margin-left: .4em;
-    margin-right: .2em;
 
-  }
+@include breakpoint($lap, $no_query: true) {
+    .navigation li {
+        float: none;
+        display: inline-block;
+        width: auto;
+        margin-left: .4em;
+        margin-right: .2em;
+        @if $legacy-support-for-ie6, $legacy-support-for-ie7, $legacy-support-for-ie8 {
+            *display: block;
+            *float: left;
+        }
+    }
 }
+
 
 .navigation a {
-  text-transform: uppercase;
-  font-weight: 400;
-  letter-spacing: 0.125em;
-  //color: $textColor;
-  text-decoration: none;
-  width: 100%;
-  //border-bottom: 0.063em solid (lighten($brightBlue, 19%));
-  padding: .5em 1em;
-  float: left;
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 0.125em;
+    //color: $textColor;
+    text-decoration: none;
+    width: 100%;
+    //border-bottom: 0.063em solid (lighten($brightBlue, 19%));
+    padding: .5em 1em;
+    float: left;
 }
-.navigation a:focus {
-  //background: #ffffff;
-  outline: none;
-  //color: $brightBlue;
-}
-@include breakpoint($lap) {
-  .navigation a {
-    _float: none;
-    -webkit-font-smoothing: antialiased;
-    margin: 0;
-    padding: 1em .7em .5em;
-    background: transparent;
-    border: 0;
-    //animation for big goes here
-  }
 
+.navigation a:focus {
+    //background: #ffffff;
+    outline: none;
+    //color: $brightBlue;
 }
+
+@include breakpoint($lap, $no_query: true) {
+    .navigation a {
+        margin: 0;
+        padding: 1em .7em .5em;
+        background: transparent;
+        border: 0;
+        //animation for big goes here
+        @if $legacy-support-for-ie6, $legacy-support-for-ie7, $legacy-support-for-ie8 {
+            _float: none;
+        }
+    }
+}
+
+
 .js .navigation {
-  clip: rect(0 0 0 0);
-  max-height: 0;
-  position: absolute;
-  display: block;
-  overflow: hidden;
+    clip: rect(0 0 0 0);
+    max-height: 0;
+    position: absolute;
+    display: block;
+    overflow: hidden;
 }
-@include breakpoint($lap) {
-  .js .navigation {
-    position: relative !important;
-    max-height: none;
-  }
+
+@include breakpoint($lap, $no_query: true) {
+    .js .navigation {
+        position: relative !important;
+        max-height: none;
+    }
 }
+
+
 .navigation.opened {
-  max-height: 9999em
+    max-height: 9999em;
 }
+
 .nav-toggle {
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -107,8 +126,8 @@ Any extra IE8 only styles.
     //color: $textColor;
 }
 
-@include breakpoint($lap) {
-  .nav-toggle {
-    display: none;
-  }
+@include breakpoint($lap, $no_query: true) {
+    .nav-toggle {
+        display: none;
+    }
 }

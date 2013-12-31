@@ -110,7 +110,8 @@ $lap: 990px;
 $desk: 1200px;
 
 //grids
-
+$include-border-box: true;
+$include-clearfix: true;
 $grids: 4;
 $grids: add-grid(6 at $portable);
 $grids: add-grid(12 at $lap);

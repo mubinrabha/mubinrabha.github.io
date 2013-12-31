@@ -1,11 +1,13 @@
- $show-baseline-grid-background: false;
-@if true {
-  $grid-background-baseline-height: $base-line-height;
-  body {
-    @include debug-vertical-alignment;
-  }
-}
+/*
+$show-baseline-grid-background: false;
 
+@if true {
+    $grid-background-baseline-height: $base-line-height;
+    body {
+        @include debug-vertical-alignment;
+    }
+}
+*/
 /*
 .l-general__main {
 
@@ -16,25 +18,35 @@
  
  */
 
- // Layout Styles
+// Layout Styles
 
 .l-contain {
-	width: 98%;
-	max-width: 1300px;
-	margin: 0 auto;
-	@include breakpoint($portable, $no-query: true) {
-		width: 96%;
-	}
-	@include breakpoint($desk, $no-query: false) {
-		width: 92%;
-		padding-right: 2%;
-		padding-left: 2%;
+    width: 98%;
+    max-width: 1300px;
+    margin: 0 auto;
+    @include background-grid;
+    @include breakpoint($portable, $no_query: true) {
+        width: 96%;
+    }
+
+    @include breakpoint($desk, $no_query: false) {
+        width: 92%;
+        padding-right: 2%;
+        padding-left: 2%;
+    }
+}
+
+.l-logo {
+	@include grid-span(4, 1, 4);
+	@include breakpoint($desk) {
+		@include grid-span(2, 1, 12);
 	}
 }
- .l-banner {
- 	@include grid-span(4, 1, 4);
- }
 
- .l-navigation {
- 	@include grid-span(4, 1, 4);
- }
+
+.l-navigation {
+    @include grid-span(4, 1, 4);
+    @include breakpoint($desk, $no-query: true) {
+    	@include grid-span(10, 3, 12);
+    }
+}
