@@ -3,13 +3,14 @@
 
 # TEAM
 
-    <name> -- <role> -- <twitter>
+    <name> Dhrubajyoti Das <role> Jack of ALL <twitter> (i m stupid)
 
 # THANKS
 
     <name>
-
+    dhruba
 # TECHNOLOGY COLOPHON
 
     HTML5, CSS3
-    Normalize.css, jQuery, Modernizr
+    Normalize.css, jQuery, Modernizr, SASS & Compass
+    Ruby.
