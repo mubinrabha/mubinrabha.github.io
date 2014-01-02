@@ -8,12 +8,12 @@
 // @font-face
 
 @font-face {
-    font-family: 'merriweatherregular';
-    src: font_url('merriweather-regular-webfont.eot');
-    src: font_url('merriweather-regular-webfont.eot?#iefix') format('embedded-opentype'),
-         font_url('merriweather-regular-webfont.woff') format('woff'),
-         font_url('merriweather-regular-webfont.ttf') format('truetype'),
-         font_url('merriweather-regular-webfont.svg#merriweatherregular') format('svg');
+    font-family: 'proxima_novalight';
+    src: font-url('proximanova-light-webfont.eot');
+    src: font-url('proximanova-light-webfont.eot?#iefix') format('embedded-opentype'),
+         font-url('proximanova-light-webfont.woff') format('woff'),
+         font-url('proximanova-light-webfont.ttf') format('truetype'),
+         font-url('proximanova-light-webfont.svg#proxima_novalight') format('svg');
     font-weight: normal;
     font-style: normal;
 
@@ -23,12 +23,12 @@
 
 
 @font-face {
-    font-family: 'merriweatheritalic';
-    src: font_url('merriweather-italic-webfont.eot');
-    src: font_url('merriweather-italic-webfont.eot?#iefix') format('embedded-opentype'),
-         font_url('merriweather-italic-webfont.woff') format('woff'),
-         font_url('merriweather-italic-webfont.ttf') format('truetype'),
-         font_url('merriweather-italic-webfont.svg#merriweatheritalic') format('svg');
+    font-family: 'proxima_nova_rgregular';
+    src: font-url('proximanova-regular-webfont.eot');
+    src: font-url('proximanova-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         font-url('proximanova-regular-webfont.woff') format('woff'),
+         font-url('proximanova-regular-webfont.ttf') format('truetype'),
+         font-url('proximanova-regular-webfont.svg#proxima_nova_rgregular') format('svg');
     font-weight: normal;
     font-style: normal;
 
@@ -38,17 +38,16 @@
 
 
 @font-face {
-    font-family: 'merriweatherbold';
-    src: font_url('merriweather-bold-webfont.eot');
-    src: font_url('merriweather-bold-webfont.eot?#iefix') format('embedded-opentype'),
-         font_url('merriweather-bold-webfont.woff') format('woff'),
-         font_url('merriweather-bold-webfont.ttf') format('truetype'),
-         font_url('merriweather-bold-webfont.svg#merriweatherbold') format('svg');
+    font-family: 'proxima_novasemibold';
+    src: font-url('proximanova-semibold-webfont.eot');
+    src: font-url('proximanova-semibold-webfont.eot?#iefix') format('embedded-opentype'),
+         font-url('proximanova-semibold-webfont.woff') format('woff'),
+         font-url('proximanova-semibold-webfont.ttf') format('truetype'),
+         font-url('proximanova-semibold-webfont.svg#proxima_novasemibold') format('svg');
     font-weight: normal;
     font-style: normal;
 
 }
-
 
 
 
@@ -56,7 +55,7 @@
 $strict-normalize: false !default;
 
 // The default font family.
-$base-font-family: 'merriweatherregular', Georgia, serif !default;
+$base-font-family: 'proxima_nova_rgregular', Georgia, serif !default;
 
 // The base font size.
 $base-font-size: 16px !default; // Override default set in Compass' Vertical Rhythm partial.
@@ -87,13 +86,14 @@ $legacy-support-for-ie8: false !default;
 @import "compass/css3/box-sizing";
 @import "compass/typography/vertical_rhythm";
 @import "toolkit";
-@import "singularitygs";
 @import "breakpoint";
+@import "singularitygs";
+
 @import "rgbapng";
 
 // colors 
 
-$bodycopy: rgb(85, 85, 85);
+$bodycopy: rgb(51, 51, 51);
 $link-active: rgb(76, 76, 76);
 $link-hover: rgb(96, 189, 219);
 $heading-primary: rgb(76, 76, 76);
@@ -105,13 +105,14 @@ $background: rgb(243, 243, 243);
 // breakpoints 
 $breakpoint-to-ems: true;
 $plam: 320px;
-$portable: 640px;
+$portable: 480px;
 $lap: 990px;
-$desk: 1200px;
+$desk: 1280px;
 
 //grids
 $include-border-box: true;
 $include-clearfix: true;
 $grids: 4;
+$gutters: 1/4;
 $grids: add-grid(6 at $portable);
 $grids: add-grid(12 at $lap);

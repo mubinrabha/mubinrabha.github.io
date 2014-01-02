@@ -40,3 +40,6 @@ $RECYCLE.BIN/
 *.msm
 *.msp
 *.exe
+#my custom entry
+
+_*

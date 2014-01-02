@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
 
-gem 'toolkit'
 gem 'singularitygs'
-gem 'breakpoint'
-
+gem 'toolkit'
+gem 'compass-rgbapng'

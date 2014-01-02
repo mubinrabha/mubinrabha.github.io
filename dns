@@ -1,0 +1,16 @@
+C:\Users\riju>dig mubinrabha.com +nostats +nocomments +nocmd
+
+; <<>> DiG 9.8.6-P1 <<>> mubinrabha.com +nostats +nocomments +nocmd
+;; global options: +cmd
+;mubinrabha.com.                        IN      A
+mubinrabha.com.         27786   IN      CNAME   mubinrabha.github.io.
+mubinrabha.github.io.   2586    IN      CNAME   github.map.fastly.net.
+github.map.fastly.net.  30      IN      A       103.245.222.133
+fastly.net.             23378   IN      NS      ns4.p04.dynect.net.
+fastly.net.             23378   IN      NS      ns3.p04.dynect.net.
+fastly.net.             23378   IN      NS      ns1.p04.dynect.net.
+fastly.net.             23378   IN      NS      ns2.p04.dynect.net.
+ns1.p04.dynect.net.     31999   IN      A       208.78.70.4
+ns2.p04.dynect.net.     84562   IN      A       204.13.250.4
+ns3.p04.dynect.net.     19877   IN      A       208.78.71.4
+ns4.p04.dynect.net.     34769   IN      A       204.13.251.4

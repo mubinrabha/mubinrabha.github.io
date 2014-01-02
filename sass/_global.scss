@@ -8,6 +8,31 @@ $border: rgb(238, 238, 238);
 $background: rgb(243, 243, 243); */
 
 // links all
+// viewport reset
+@-webkit-viewport {
+    width: device-width;
+}
+
+
+@-moz-viewport {
+    width: device-width;
+}
+
+
+@-ms-viewport {
+    width: device-width;
+}
+
+
+@-o-viewport {
+    width: device-width;
+}
+
+
+@viewport {
+    width: device-width;
+}
+
 
 a {
     @include adjust-font-size-to(16px);
@@ -30,9 +55,24 @@ a {
 
 h1 {
     color: $heading-primary;
-    font-family: 'merriweatherbold';
+    font-family: 'proxima_novasemibold';
 }
 
 h2, h3, h4, h5, h6 {
     color: $heading-sub;
+}
+
+li {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    margin: 0 0 rhythm(0.5) 0;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    -webkit-padding-start: 0;
 }

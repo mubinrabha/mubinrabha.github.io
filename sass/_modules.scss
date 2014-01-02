@@ -6,13 +6,25 @@ Any extra IE8 only styles.
     }
   }
 */
-.m-logo {
-  text-align: center;
-  @include breakpoint($desk) {
-    text-align: left;
-  }
+.m-contain {
+    background: #ffffff;
+    //boxshadow
 }
 
+.m-banner {
+    @include apply-side-rhythm-border(top, $width: 5px, $lines: 0);
+    border-top-color: $border;
+    @include clearfix;
+    @include apply-side-rhythm-border(bottom, $width: 1px, $lines: 0);
+    border-bottom-color: $border;
+}
+
+.m-logo {
+    text-align: center;
+    @include breakpoint($desk) {
+       text-align: left;
+    }
+}
 
 .navigation {
     z-index: 1;
@@ -47,7 +59,7 @@ Any extra IE8 only styles.
         width: auto;
         margin-left: .4em;
         margin-right: .2em;
-        @if $legacy-support-for-ie6, $legacy-support-for-ie7, $legacy-support-for-ie8 {
+        @if $legacy-support-for-ie6 {
             *display: block;
             *float: left;
         }
@@ -65,12 +77,13 @@ Any extra IE8 only styles.
     //border-bottom: 0.063em solid (lighten($brightBlue, 19%));
     padding: .5em 1em;
     float: left;
+    text-align: center;
 }
 
 .navigation a:focus {
-    //background: #ffffff;
+    background-color: $background;
     outline: none;
-    //color: $brightBlue;
+    //color: $link-hover;
 }
 
 @include breakpoint($lap, $no_query: true) {
@@ -80,7 +93,7 @@ Any extra IE8 only styles.
         background: transparent;
         border: 0;
         //animation for big goes here
-        @if $legacy-support-for-ie6, $legacy-support-for-ie7, $legacy-support-for-ie8 {
+        @if $legacy-support-for-ie6 {
             _float: none;
         }
     }
@@ -118,16 +131,71 @@ Any extra IE8 only styles.
     text-align: center;
     display: inline-block;
     width: 100%;
-    //background-color: $lightGrey;
+    background-color: $background;
     height: 3em;
-    padding: 0.5em 0 1.5em 0;
+    padding: 0.7em 0 1.5em 0;
     //border-bottom: 0.063em solid (darken($lightGrey, 4%));
     //border-top: 0.063em solid (darken($lightGrey, 4%));
-    //color: $textColor;
+    @include apply-side-rhythm-border(top, $width: 1px, $lines: 0);
+    border-top-color: $border;
+    @include apply-side-rhythm-border(bottom, $width: 1px, $lines: 0);
+    border-bottom-color: $border;
 }
 
 @include breakpoint($lap, $no_query: true) {
     .nav-toggle {
         display: none;
     }
+}
+
+
+.l-navigation {
+    @include breakpoint($desk) {
+        margin: rhythm(1) 0 0 0;
+    }
+}
+
+//@include apply-side-rhythm-border(top,    $width: 1px, $lines: 0.35);
+
+.slides {
+    position: relative;
+    list-style: none;
+    overflow: hidden;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.slides li {
+    -webkit-backface-visibility: hidden;
+    position: absolute;
+    display: none;
+    width: 100%;
+    left: 0;
+    top: 0;
+}
+
+.slides li:first-child {
+    position: relative;
+    display: block;
+    float: left;
+}
+
+.slides img {
+    display: block;
+    height: auto;
+    float: left;
+    width: 100%;
+    border: 0;
+    margin: 0;
+}
+
+.m-slide {
+    @include apply-side-rhythm-border(bottom, $width: 3px, $lines: 0);
+    @include apply-side-rhythm-border(top, $width: 3px, $lines: 0);
+    border-color: $border;
+}
+
+.m-latestwork {
+    text-align: center;
 }

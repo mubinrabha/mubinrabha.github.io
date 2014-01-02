@@ -9,7 +9,11 @@ $legacy-support-for-ie8 : true;
 // Force the breakpoint mixin to discard all media queries except ones with
 // $no-query set to true. Since we use the default values in styles.scss,
 // we don't need to set these in _init.scss.
-$breakpoint-no-queries  : true;
-$breakpoint-no-query-fallbacks : true;
+$breakpoint-no-queries: true;
+$breakpoint-no-query-fallbacks: true;
  
-@import "modern_styles";
+@import "base";
+@import "normalize";
+@import "global";
+@import "modules";
+@import "layout";
