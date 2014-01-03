@@ -4,17 +4,16 @@
     margin: 0 auto;
     @include breakpoint($plam) {
         width: 98%;
-        padding: 0 2%;
     }
 
     @include breakpoint($lap) {
         width: 96%;
-        padding: 0 4%;
+
     }
 
     @include breakpoint($desk) {
         width: 92%;
-        padding: 0 4%;
+
         max-width: 1280px;
     }
 
@@ -22,7 +21,9 @@
         width: 990px;
     }
 }
-
+.l-banner {
+	@include clearfix;
+}
 .l-logo {
     @include grid-span(4, 1);
     @include breakpoint($desk) {
@@ -37,10 +38,7 @@
     }
 }
 
-.l-latestwork {
-    margin: rhythm(1) 0;
-    @include clearfix;
-}
+
 
 .l-cartoon, .l-painting, .l-misc {
     @include grid-span(4, 1);
@@ -99,4 +97,20 @@
             }
         }
     }
+}
+
+.l-book {
+	//@include background-grid;
+	.l-one, .l-two {
+		@include grid-span(4, 1);
+	}
+	@include breakpoint($lap, $no_query: true) {
+		@include layout(12);
+		.l-one {
+			@include grid-span(6, 1);
+		}
+		.l-two {
+			@include grid-span(6, 7);
+		}
+	}
 }

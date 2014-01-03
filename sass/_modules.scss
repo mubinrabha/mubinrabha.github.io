@@ -6,24 +6,19 @@ Any extra IE8 only styles.
     }
   }
 */
+
 .m-contain {
-    background: #ffffff;
-    //boxshadow
+  background-color: #ffffff;
 }
 
 .m-banner {
-    @include apply-side-rhythm-border(top, $width: 5px, $lines: 0);
-    border-top-color: $border;
-    @include clearfix;
-    @include apply-side-rhythm-border(bottom, $width: 1px, $lines: 0);
-    border-bottom-color: $border;
+    background-color: $bgdark;
+
 }
 
 .m-logo {
     text-align: center;
-    @include breakpoint($desk) {
-       text-align: left;
-    }
+    color: #ffffff;
 }
 
 .navigation {
@@ -131,7 +126,8 @@ Any extra IE8 only styles.
     text-align: center;
     display: inline-block;
     width: 100%;
-    background-color: $background;
+    background-color: $border;
+    color: $bgdark;
     height: 3em;
     padding: 0.7em 0 1.5em 0;
     //border-bottom: 0.063em solid (darken($lightGrey, 4%));
@@ -140,6 +136,9 @@ Any extra IE8 only styles.
     border-top-color: $border;
     @include apply-side-rhythm-border(bottom, $width: 1px, $lines: 0);
     border-bottom-color: $border;
+    &:hover, &:focus {
+      color: #333333;
+    }
 }
 
 @include breakpoint($lap, $no_query: true) {
@@ -191,11 +190,28 @@ Any extra IE8 only styles.
 }
 
 .m-slide {
-    @include apply-side-rhythm-border(bottom, $width: 3px, $lines: 0);
-    @include apply-side-rhythm-border(top, $width: 3px, $lines: 0);
-    border-color: $border;
+
 }
 
-.m-latestwork {
+.m-block {
     text-align: center;
+     margin: rhythm(1);
+    @include clearfix;
+    img {
+      border: 5px solid $border;
+    }
+    h2 {
+      text-transform: uppercase;
+      @include apply-side-rhythm-border(top, $width: 1px, $lines: 0);
+      border-top-color: $border;
+      @include apply-side-rhythm-border(bottom, $width: 1px, $lines: 0);
+      border-bottom-color: $border;
+    }
+}
+
+.m-fancy {
+  @include apply-side-rhythm-border(bottom, $width: 1px, $lines: 0);
+  border-left-color: $border;
+  text-align: left;
+  @include adjust-font-size-to(32px);
 }

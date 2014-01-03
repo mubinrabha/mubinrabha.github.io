@@ -8,46 +8,39 @@
 // @font-face
 
 @font-face {
-    font-family: 'proxima_novalight';
-    src: font-url('proximanova-light-webfont.eot');
-    src: font-url('proximanova-light-webfont.eot?#iefix') format('embedded-opentype'),
-         font-url('proximanova-light-webfont.woff') format('woff'),
-         font-url('proximanova-light-webfont.ttf') format('truetype'),
-         font-url('proximanova-light-webfont.svg#proxima_novalight') format('svg');
+    font-family: 'open_sansitalic';
+    src: font-url('OpenSans-Italic-webfont.eot');
+    src: font-url('OpenSans-Italic-webfont.eot?#iefix') format('embedded-opentype'),
+         font-url('OpenSans-Italic-webfont.woff') format('woff'),
+         font-url('OpenSans-Italic-webfont.ttf') format('truetype'),
+         font-url('OpenSans-Italic-webfont.svg#open_sansitalic') format('svg');
     font-weight: normal;
     font-style: normal;
 
 }
-
-
-
-
 @font-face {
-    font-family: 'proxima_nova_rgregular';
-    src: font-url('proximanova-regular-webfont.eot');
-    src: font-url('proximanova-regular-webfont.eot?#iefix') format('embedded-opentype'),
-         font-url('proximanova-regular-webfont.woff') format('woff'),
-         font-url('proximanova-regular-webfont.ttf') format('truetype'),
-         font-url('proximanova-regular-webfont.svg#proxima_nova_rgregular') format('svg');
+    font-family: 'open_sans_condensedbold';
+    src: font-url('OpenSans-CondBold-webfont.eot');
+    src: font-url('OpenSans-CondBold-webfont.eot?#iefix') format('embedded-opentype'),
+         font-url('OpenSans-CondBold-webfont.woff') format('woff'),
+         font-url('OpenSans-CondBold-webfont.ttf') format('truetype'),
+         font-url('OpenSans-CondBold-webfont.svg#open_sans_condensedbold') format('svg');
     font-weight: normal;
     font-style: normal;
 
 }
-
-
-
-
 @font-face {
-    font-family: 'proxima_novasemibold';
-    src: font-url('proximanova-semibold-webfont.eot');
-    src: font-url('proximanova-semibold-webfont.eot?#iefix') format('embedded-opentype'),
-         font-url('proximanova-semibold-webfont.woff') format('woff'),
-         font-url('proximanova-semibold-webfont.ttf') format('truetype'),
-         font-url('proximanova-semibold-webfont.svg#proxima_novasemibold') format('svg');
+    font-family: 'open_sansregular';
+    src: font-url('OpenSans-Regular-webfont.eot');
+    src: font-url('OpenSans-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         font-url('OpenSans-Regular-webfont.woff') format('woff'),
+         font-url('OpenSans-Regular-webfont.ttf') format('truetype'),
+         font-url('OpenSans-Regular-webfont.svg#open_sansregular') format('svg');
     font-weight: normal;
     font-style: normal;
 
 }
+
 
 
 
@@ -55,7 +48,7 @@
 $strict-normalize: false !default;
 
 // The default font family.
-$base-font-family: 'proxima_nova_rgregular', Georgia, serif !default;
+$base-font-family: 'open_sansregular', sans-serif !default;
 
 // The base font size.
 $base-font-size: 16px !default; // Override default set in Compass' Vertical Rhythm partial.
@@ -84,6 +77,7 @@ $legacy-support-for-ie8: false !default;
 // After the default variables are set, import the required Compass partials.
 @import "compass/support";
 @import "compass/css3/box-sizing";
+@import "compass/css3/box-shadow";
 @import "compass/typography/vertical_rhythm";
 @import "toolkit";
 @import "breakpoint";
@@ -92,14 +86,15 @@ $legacy-support-for-ie8: false !default;
 @import "rgbapng";
 
 // colors 
-
-$bodycopy: rgb(51, 51, 51);
-$link-active: rgb(76, 76, 76);
-$link-hover: rgb(96, 189, 219);
-$heading-primary: rgb(76, 76, 76);
+$bgdark: rgb(71, 71, 71);
+$bodycopy: rgb(37, 37, 37);
+$link: rgb(161, 166, 175);
+$link-active: rgb(236, 232, 232);
+$link-hover: rgb(250, 247, 247);
+$heading-primary: rgb(153, 153, 153);
 $heading-sub: rgb(85, 85, 85);
-$border: rgb(238, 238, 238);
-$background: rgb(243, 243, 243);
+$border: rgb(227, 225, 225);
+$background: rgb(153, 153, 153);;
 
 
 // breakpoints 
