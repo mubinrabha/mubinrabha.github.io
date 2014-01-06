@@ -245,10 +245,10 @@ Any extra IE8 only styles.
     @include rgba-background(rgba(255, 255, 255, 0.73)); 
      
     @include vertical-center;
-    @include adjust-font-size-to(20px);
+    @include adjust-font-size-to(18px);
     }
     @include breakpoint($desk, $no_query: false){
-    @include adjust-font-size-to(23px);
+    @include adjust-font-size-to(20px);
     }
         text-align: left;
         
@@ -263,10 +263,50 @@ aside {
     color: $link !important;
     text-align: left !important;
     h2 {
-    color: #ffffff !important;
+    color: $link !important;
+    border-top-color: rgb(65, 125, 180) !important;
+    border-bottom-color: rgb(65, 125, 180) !important;
+    }
+    a {
+    border: none;
     }
 }
+//social styles
+.m-social a {
+    display: inline-block;
+    border: none;
+    padding: 0 5%;
+    }
+@include style-external-links('facebook.com') {
+    @include replace-text-pe($social, 'Facebook');
+    }
+@include style-external-links('twitter.com') {
+    @include replace-text-pe($social, 'Twitter');
+    }
+@include style-external-links('youtube.com') {
+    @include replace-text-pe($social, 'YouTube');
+    }
+    
+@include style-external-links('googleplus.com') {
+    @include replace-text-pe($social, 'Googleplus');
+    }
 
 footer {
     @include clearfix;
+    text-align: center;
+    color: darken($link, 13%);
+    background-color: $bodycopy;
+    padding: rhythm(1);
+    p {
+         @include apply-side-rhythm-border(bottom, $width: 1px, $lines: 0);
+         border-bottom-color: darken($border, 63%);
+         padding: 0 0 rhythm(1) 0;
+         
+         }
+    a {
+        @include adjust-font-size-to(13px);
+        color: darken($border, 33%);
+        text-decoration: none;
+        border: none;
+        }
 }

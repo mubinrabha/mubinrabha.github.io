@@ -113,5 +113,20 @@ $grids: add-grid(6 at $portable);
 $grids: add-grid(12 at $lap);
 //rgba png
 
-$rgbapng_path: 'img';
+$rgbapng_path: 'norgba';
 $rgbapng_px_size: 8;
+
+//boxsizing
+
+* { @include box-sizing('border-box'); };
+
+//progressive enhancement with toolkit team-sass
+
+$replace-text-pe-method: 'svg';
+$replace-text-pe-inline-svg: true;
+$replace-text-pe-with-dimensions: true;
+$replace-text-inline-element: false;
+
+$social: 'social';
+
+@include sprite-map-generator($social);
