@@ -8,17 +8,20 @@ Any extra IE8 only styles.
 */
 
 .m-contain {
-  background-color: #ffffff;
+    background-color: #ffffff;
 }
 
 .m-banner {
     background-color: $bgdark;
-
 }
 
 .m-logo {
     text-align: center;
     color: #ffffff;
+    @include breakpoint($desk) {
+        text-align: left;
+        padding: 0 0 0 rhythm(0.5);
+    }
 }
 
 .navigation {
@@ -76,7 +79,7 @@ Any extra IE8 only styles.
 }
 
 .navigation a:focus {
-    background-color: $background;
+    background-color: $bglight;
     outline: none;
     //color: $link-hover;
 }
@@ -137,7 +140,7 @@ Any extra IE8 only styles.
     @include apply-side-rhythm-border(bottom, $width: 1px, $lines: 0);
     border-bottom-color: $border;
     &:hover, &:focus {
-      color: #333333;
+        color: #333333;
     }
 }
 
@@ -189,29 +192,81 @@ Any extra IE8 only styles.
     margin: 0;
 }
 
-.m-slide {
-
-}
+.m-slide {}
 
 .m-block {
     text-align: center;
-     margin: rhythm(1);
+    padding: rhythm(1) rhythm(1) 0 rhythm(1);
+    margin-bottom: 0;
     @include clearfix;
+    background-color: #f7f7f7;
     img {
-      border: 5px solid $border;
+        border: 1px solid $border;
+        padding: 5px;
+        background-color: #ffffff;
     }
     h2 {
-      text-transform: uppercase;
-      @include apply-side-rhythm-border(top, $width: 1px, $lines: 0);
-      border-top-color: $border;
-      @include apply-side-rhythm-border(bottom, $width: 1px, $lines: 0);
-      border-bottom-color: $border;
+        text-transform: uppercase;
+        @include apply-side-rhythm-border(top, $width: 1px, $lines: 0);
+        border-top-color: $border;
+        @include apply-side-rhythm-border(bottom, $width: 1px, $lines: 0);
+        border-bottom-color: $border;
     }
 }
 
 .m-fancy {
-  @include apply-side-rhythm-border(bottom, $width: 1px, $lines: 0);
-  border-left-color: $border;
-  text-align: left;
-  @include adjust-font-size-to(32px);
+    text-align: left;
+    color: $heading-sub;
+    @include breakpoint($lap, $no_query: true){
+        padding-top: rhythm(3);
+        }
+        @include breakpoint($desk, $no_query: false){
+            padding-top: rhythm(5);
+            }
+}
+
+.m-introduction {
+    padding-bottom: rhythm(1);
+    .bg {
+        display: table;
+        @include breakpoint($lap, $no_query: true){
+         background-image: url('../img/color-palette.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 16.563em;
+        }
+        
+
+            
+    p {
+     padding: rhythm(1);
+     color: $heading-sub;
+     //background-color: rgba(255, 255, 255, 0.73);
+    @include rgba-background(rgba(255, 255, 255, 0.73)); 
+     
+    @include vertical-center;
+    @include adjust-font-size-to(20px);
+    }
+    @include breakpoint($desk, $no_query: false){
+    @include adjust-font-size-to(23px);
+    }
+        text-align: left;
+        
+       
+       
+    }
+}
+
+aside {
+    @include clearfix;
+    background-color: $bgdark !important;
+    color: $link !important;
+    text-align: left !important;
+    h2 {
+    color: #ffffff !important;
+    }
+}
+
+footer {
+    @include clearfix;
 }

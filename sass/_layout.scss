@@ -3,7 +3,7 @@
 .l-contain {
     margin: 0 auto;
     @include breakpoint($plam) {
-        width: 98%;
+        width: 100%;
     }
 
     @include breakpoint($lap) {
@@ -18,7 +18,7 @@
     }
 
     @if $legacy-support-for-ie6 {
-        width: 990px;
+        width: 100%;
     }
 }
 .l-banner {
@@ -99,7 +99,7 @@
     }
 }
 
-.l-book {
+.l-half {
 	//@include background-grid;
 	.l-one, .l-two {
 		@include grid-span(4, 1);

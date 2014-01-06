@@ -33,7 +33,9 @@ $background: rgb(243, 243, 243); */
     width: device-width;
 }
 
-
+html, body {
+    height: 100%;
+    }
 a {
     @include adjust-font-size-to(16px);
     @include apply-side-rhythm-border(bottom, $width: 1px, $lines: 0);

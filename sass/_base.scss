@@ -86,17 +86,17 @@ $legacy-support-for-ie8: false !default;
 @import "rgbapng";
 
 // colors 
-$bgdark: rgb(71, 71, 71);
+$bgdark: rgb(48, 116, 163);
 $bodycopy: rgb(37, 37, 37);
-$link: rgb(161, 166, 175);
+$link: #e5e5e5;
 $link-active: rgb(236, 232, 232);
 $link-hover: rgb(250, 247, 247);
 $heading-primary: rgb(153, 153, 153);
 $heading-sub: rgb(85, 85, 85);
 $border: rgb(227, 225, 225);
 $background: rgb(153, 153, 153);;
-
-
+$blue: rgb(25, 193, 195);
+$bglight: #3074a3;
 // breakpoints 
 $breakpoint-to-ems: true;
 $plam: 320px;
@@ -111,3 +111,7 @@ $grids: 4;
 $gutters: 1/4;
 $grids: add-grid(6 at $portable);
 $grids: add-grid(12 at $lap);
+//rgba png
+
+$rgbapng_path: 'img';
+$rgbapng_px_size: 8;

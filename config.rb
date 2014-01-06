@@ -7,8 +7,8 @@ require 'rgbapng'
 http_path = "/"
 css_dir = "stylesheets"
 sass_dir = "sass"
-images_dir = "images"
-javascripts_dir = "javascripts"
+images_dir = "img"
+javascripts_dir = "js"
 fonts_dir = "stylesheets/fonts"
 
 # You can select your preferred output style here (can be overridden via the command line):
