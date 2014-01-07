@@ -72,32 +72,44 @@
             <ul class="l-cartoon">
 
                 <li>
-                    <img src="img/f1.jpg" alt="#">
+                    <a rel="gallery" href="img/f1@2x.jpg" class="swipebox" title="cartoon">
+                        <img src="img/f1.jpg" alt="cartoon">
+                    </a>
                 </li>
                 <li>
-                    <img src="img/f2.jpg" alt="#">
+                    <a rel="gallery" href="img/f2@2x.jpg" class="swipebox" title="cartoon">
+                        <img src="img/f2.jpg" alt="cartoon">
+                    </a>
                 </li>
 
             </ul>
             <ul class="l-painting">
 
                 <li>
+                <a rel="gallery" href="img/f3@2x.jpg" class="swipebox" title="#">
                     <img src="img/f3.jpg" alt="#">
+                    </a>
                 </li>
 
                 <li>
+                <a rel="gallery" href="img/f4@2x.jpg" class="swipebox" title="#">
                     <img src="img/f4.jpg" alt="#">
+                    </a>
                 </li>
 
             </ul>
             <ul class="l-misc">
 
                 <li>
+                <a rel="gallery" href="img/f5@2x.jpg" class="swipebox" title="#">
                     <img src="img/f5.jpg" alt="#">
+                    </a>
                 </li>
 
                 <li>
+                <a rel="gallery" href="img/f6@2x.jpg" class="swipebox" title="#">
                     <img src="img/f6.jpg" alt="#">
+                    </a>
                 </li>
 
             </ul>
@@ -159,6 +171,12 @@
     $(function() {
         $(".slides").responsiveSlides();
     });
+    </script>
+    <script src="js/swipebox.js"></script>
+    <script>
+        jQuery(function($) {
+	$(".swipebox").swipebox();
+});
     </script>
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. 
         <script>
