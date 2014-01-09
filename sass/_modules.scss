@@ -221,6 +221,9 @@ Any extra IE8 only styles.
         @include apply-side-rhythm-border(bottom, $width: 1px, $lines: 0);
         border-bottom-color: $border;
     }
+    a {
+        border: none;
+        }
 }
 
 .m-fancy {
@@ -271,8 +274,21 @@ Any extra IE8 only styles.
 .lt-ie8 .m-introduction p {
     padding: rhythm(2) rhythm(1);
     }
+    
+ .btm {
+    padding-bottom: rhythm(2);
+    }
+.m-creative p {
+        @include clearfix;
+        text-align: left;
+        @include breakpoint($lap, $no_query: true) {
+            margin: 0 rhythm(3);
+            }
+        }
+
 aside {
-    @include clearfix;
+
+    //@include clearfix;
     background-color: $bgdark !important;
     color: $link !important;
     text-align: left !important;
@@ -287,7 +303,6 @@ aside {
 }
 //social styles
 .m-social a {
-
         display: inline-block;
         border: none;
 
@@ -352,3 +367,4 @@ footer {
         border: none;
         }
 }
+

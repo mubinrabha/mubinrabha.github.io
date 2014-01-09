@@ -83,8 +83,34 @@
         }
     }
 }
+.l-creative {
+    @include clearfix;
+    @include grid-span(4, 1);
+    @include breakpoint($lap, $no_query: true) {
+        @include grid-span(12, 1);
+        @include layout(10) {
+        .l-ca {
 
+            @include grid-span(10, 1);
 
+            }
+            .l-cb {
+
+                @include grid-span(10, 1);
+            
+                }
+        }
+    }   
+}
+
+  
+  
+  
+  
+  
+  
+  
+  
 @include breakpoint($lap, $no_query: true) {
     .l-misc {
         @include grid-span(4, 9);
@@ -101,17 +127,20 @@
 
 .l-half {
 	//@include background-grid;
+    @include clearfix;
 	.l-one, .l-two {
+        //@include clearfix;
 		@include grid-span(4, 1);
 	}
 	@include breakpoint($lap, $no_query: true) {
 		@include layout(12);
+
 		.l-one {
 			@include grid-span(6, 1);
+            margin-right: 0;
 		}
 		.l-two {
 			@include grid-span(6, 7);
 		}
 	}
 }
-
