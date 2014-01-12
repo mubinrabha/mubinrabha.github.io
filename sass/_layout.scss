@@ -90,7 +90,12 @@
         @include grid-span(12, 1);
         @include layout(10) {
         .l-ca {
-
+            img {
+                margin: 0 0 rhythm(1) 0;
+                }
+            p {
+                padding-bottom: rhythm(1);
+                }
             @include grid-span(10, 1);
 
             }
